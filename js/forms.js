@@ -7,7 +7,7 @@
   'use strict';
 
   // Get key at web3forms.com — register info@jpcareers.in as recipient
-  const WEB3FORMS_KEY = '2bc96b10-ae95-4364-9eab-517d36a08fbd';
+  const WEB3FORMS_KEY = '1b557977-bbc9-42dd-98dd-1dc979cbfb9a';
 
   /* ─── Utility: show field error ─── */
   function showFieldError(field, msg) {
