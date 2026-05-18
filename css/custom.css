@@ -1310,8 +1310,8 @@ body {
 
 @media (max-width: 1023px) {
   #bottom-nav { display: flex; }
-  /* Add padding so content isn't hidden behind bottom nav */
   body { padding-bottom: 70px; }
+  #whatsapp-btn { bottom: 5.5rem; }
 }
 
 /* ---------- Print styles ---------- */
