@@ -856,7 +856,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 900;
+  z-index: 9500;
   box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5);
   transition: var(--transition);
   text-decoration: none;
@@ -1311,7 +1311,7 @@ body {
 @media (max-width: 1023px) {
   #bottom-nav { display: flex; }
   body { padding-bottom: 70px; }
-  #whatsapp-btn { bottom: 5.5rem; }
+  #whatsapp-btn { bottom: 5rem; right: 1rem; }
 }
 
 /* ---------- Print styles ---------- */
