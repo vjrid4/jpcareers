@@ -140,8 +140,8 @@
     try { sessionStorage.setItem('jp-consult-shown', '1'); } catch (e) {}
   }
 
-  // Show after 30s
-  setTimeout(showConsultPopup, 30000);
+  // Show after 15s
+  setTimeout(showConsultPopup, 15000);
 
   // Exit intent (desktop)
   document.addEventListener('mouseleave', function (e) {
