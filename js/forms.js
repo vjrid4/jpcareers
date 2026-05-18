@@ -158,8 +158,8 @@
     const subject = form.dataset.subject || 'New Enquiry from JP Careers Website';
     formData.append('subject', subject);
 
-    // BCC copy to admin
-    formData.append('bcc', 'vjrid4@gmail.com');
+    // CC copy to admin (web3forms free plan supports cc, not bcc)
+    formData.append('cc', 'vjrid4@gmail.com');
 
     // Sender display name
     formData.append('from_name', 'JP Careers Website');
