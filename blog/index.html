@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Overseas Career Guides for Indians | JP Careers</title>
+  <meta name="description" content="Free expert guides on overseas jobs, study abroad, work visas, and career advice for Indians. Japan, Germany, Canada, UK, Australia — everything you need to know." />
+  <meta name="keywords" content="overseas jobs blog India, study abroad guide Indians, work visa guide India, Japan jobs guide, Germany study guide, Canada immigration tips" />
+  <link rel="canonical" href="https://jpcareers.in/blog/" />
+  <meta property="og:title" content="Blog — JP Careers Knowledge Hub" />
+  <meta property="og:description" content="Free expert guides on overseas jobs, study abroad, and work visas for Indians." />
+  <meta property="og:url" content="https://jpcareers.in/blog/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/custom.css" />
+</head>
+<body class="animated-gradient-bg">
+  <div id="scroll-progress"></div>
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
+      <a href="../index.html" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none">
+        <span style="width:36px;height:36px;background:linear-gradient(135deg,#6C63FF,#00D4FF);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;font-weight:800;flex-shrink:0">JP</span>
+        <span class="gradient-text font-heading" style="font-size:1.2rem;font-weight:800">JP Careers</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../services.html" class="nav-link">Services</a>
+        <a href="../study-abroad.html" class="nav-link">Study Abroad</a>
+        <a href="../jobs-abroad.html" class="nav-link">Jobs Abroad</a>
+        <a href="../countries.html" class="nav-link">Countries</a>
+        <a href="index.html" class="nav-link active">Blog</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" aria-label="Toggle theme"></button>
+        <a href="../contact.html" class="btn-primary hidden md:inline-flex" style="padding:0.6rem 1.25rem;font-size:0.85rem">Book Free Consultation</a>
+        <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-expanded="false" aria-label="Open menu">
+          <span style="display:block;width:22px;height:2px;background:var(--text-primary);border-radius:2px"></span>
+          <span style="display:block;width:22px;height:2px;background:var(--text-primary);border-radius:2px"></span>
+          <span style="display:block;width:16px;height:2px;background:var(--text-primary);border-radius:2px"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-overlay" class="mobile-overlay"></div>
+  <div id="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <button id="menu-close" style="position:absolute;top:1.25rem;right:1.25rem;background:var(--bg-card);border:1px solid var(--border-glass);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-primary);font-size:1.2rem;outline:none">✕</button>
+    <a href="../index.html" class="mobile-nav-link">🏠 Home</a>
+    <a href="../services.html" class="mobile-nav-link">⚡ Services</a>
+    <a href="../study-abroad.html" class="mobile-nav-link">🎓 Study Abroad</a>
+    <a href="../jobs-abroad.html" class="mobile-nav-link">💼 Jobs Abroad</a>
+    <a href="../countries.html" class="mobile-nav-link">🌍 Countries</a>
+    <a href="index.html" class="mobile-nav-link" style="color:var(--primary);font-weight:700">📝 Blog</a>
+    <a href="../about.html" class="mobile-nav-link">👥 About Us</a>
+    <a href="../contact.html" class="mobile-nav-link">📞 Contact</a>
+    <div style="margin-top:1.5rem"><a href="../contact.html" class="btn-primary w-full" style="justify-content:center">Book Free Consultation</a></div>
+  </div>
+
+  <!-- HERO -->
+  <section class="relative pt-32 pb-16 overflow-hidden">
+    <div class="orb orb-purple" style="top:-100px;right:-100px"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
+      <div class="section-tag fade-up" style="display:inline-flex">📚 Knowledge Hub</div>
+      <h1 class="section-title fade-up delay-1" style="font-size:clamp(2.5rem,5vw,3.5rem)">
+        Free Guides for<br/><span class="gradient-text">Your Overseas Career</span>
+      </h1>
+      <p class="section-subtitle mx-auto fade-up delay-2" style="max-width:600px">
+        Expert-written, regularly updated guides on overseas jobs, study abroad, visas, and career advice — everything you need to make informed decisions.
+      </p>
+
+      <!-- Category Filters -->
+      <div class="flex flex-wrap justify-center gap-2 mt-8 fade-up delay-3">
+        <button class="glass-sm" onclick="filterPosts('all')" id="filter-all" style="padding:0.5rem 1.25rem;cursor:pointer;font-size:0.875rem;font-weight:600;color:var(--primary);border:1px solid rgba(108,99,255,0.3);border-radius:100px;outline:none;background:rgba(108,99,255,0.1)">All Posts</button>
+        <button class="glass-sm" onclick="filterPosts('jobs')" id="filter-jobs" style="padding:0.5rem 1.25rem;cursor:pointer;font-size:0.875rem;font-weight:600;color:var(--text-muted);border-radius:100px;outline:none;border:1px solid var(--border-glass)">Jobs Abroad</button>
+        <button class="glass-sm" onclick="filterPosts('study')" id="filter-study" style="padding:0.5rem 1.25rem;cursor:pointer;font-size:0.875rem;font-weight:600;color:var(--text-muted);border-radius:100px;outline:none;border:1px solid var(--border-glass)">Study Abroad</button>
+        <button class="glass-sm" onclick="filterPosts('visa')" id="filter-visa" style="padding:0.5rem 1.25rem;cursor:pointer;font-size:0.875rem;font-weight:600;color:var(--text-muted);border-radius:100px;outline:none;border:1px solid var(--border-glass)">Visa Tips</button>
+        <button class="glass-sm" onclick="filterPosts('healthcare')" id="filter-healthcare" style="padding:0.5rem 1.25rem;cursor:pointer;font-size:0.875rem;font-weight:600;color:var(--text-muted);border-radius:100px;outline:none;border:1px solid var(--border-glass)">Healthcare</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="py-10 pb-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="blog-grid">
+
+        <!-- Japan Jobs -->
+        <a href="jobs-in-japan.html" class="blog-card fade-up delay-1" style="text-decoration:none" data-category="jobs">
+          <div class="blog-thumb">
+            <div class="blog-thumb-gradient" style="background:linear-gradient(135deg,#1a0533,#6C63FF)">
+              <span style="font-size:4.5rem">🇯🇵</span>
+            </div>
+          </div>
+          <div style="padding:1.5rem">
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem">
+              <span class="blog-category">Jobs Abroad</span>
+              <span class="tag-yellow tag">Popular</span>
+            </div>
+            <h2 style="font-family:var(--font-heading);font-weight:700;font-size:1.05rem;color:var(--text-primary);margin-bottom:0.5rem;line-height:1.4">Jobs in Japan for Indians in 2025: Complete Guide</h2>
+            <p style="color:var(--text-muted);font-size:0.875rem;line-height:1.6;margin-bottom:1.25rem">Everything you need to know about working in Japan — visa types, JLPT requirements, salary ranges, top sectors, and how to apply from India.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="display:flex;align-items:center;gap:0.5rem">
+                <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#6C63FF,#00D4FF);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:#fff">JP</div>
+                <span style="color:var(--text-muted);font-size:0.78rem">JP Careers Team</span>
+              </div>
+              <span style="color:var(--text-muted);font-size:0.78rem">8 min · Jan 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Germany Study -->
+        <a href="study-in-germany.html" class="blog-card fade-up delay-2" style="text-decoration:none" data-category="study">
+          <div class="blog-thumb">
+            <div class="blog-thumb-gradient" style="background:linear-gradient(135deg,#0a2a1a,#00D4FF)">
+              <span style="font-size:4.5rem">🇩🇪</span>
+            </div>
+          </div>
+          <div style="padding:1.5rem">
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem">
+              <span class="blog-category" style="background:rgba(0,212,255,0.1);border-color:rgba(0,212,255,0.2);color:var(--cyan)">Study Abroad</span>
+              <span class="tag-green tag">Featured</span>
+            </div>
+            <h2 style="font-family:var(--font-heading);font-weight:700;font-size:1.05rem;color:var(--text-primary);margin-bottom:0.5rem;line-height:1.4">Study in Germany for Free: Complete Guide for Indian Students</h2>
+            <p style="color:var(--text-muted);font-size:0.875rem;line-height:1.6;margin-bottom:1.25rem">How to study at top German universities with zero tuition. Admission process, language requirements, blocked account, scholarships, and life in Germany.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="display:flex;align-items:center;gap:0.5rem">
+                <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#00FFA3,#00D4FF);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:#050816">AR</div>
+                <span style="color:var(--text-muted);font-size:0.78rem">Ananya Rao</span>
+              </div>
+              <span style="color:var(--text-muted);font-size:0.78rem">10 min · Feb 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Nursing Jobs -->
+        <a href="nursing-jobs-abroad.html" class="blog-card fade-up delay-3" style="text-decoration:none" data-category="healthcare">
+          <div class="blog-thumb">
+            <div class="blog-thumb-gradient" style="background:linear-gradient(135deg,#003320,#00FFA3)">
+              <span style="font-size:4.5rem">🏥</span>
+            </div>
+          </div>
+          <div style="padding:1.5rem">
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem">
+              <span class="blog-category" style="background:rgba(0,255,163,0.1);border-color:rgba(0,255,163,0.2);color:var(--green)">Healthcare</span>
+            </div>
+            <h2 style="font-family:var(--font-heading);font-weight:700;font-size:1.05rem;color:var(--text-primary);margin-bottom:0.5rem;line-height:1.4">Nursing Jobs Abroad: Salary, Requirements, Top Countries 2025</h2>
+            <p style="color:var(--text-muted);font-size:0.875rem;line-height:1.6;margin-bottom:1.25rem">Complete guide for Indian nurses looking to work abroad. UK NHS, Japan, Australia, Germany — salaries, requirements, IELTS scores, and application process.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="display:flex;align-items:center;gap:0.5rem">
+                <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#7F5AF0,#6C63FF);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:#fff">PM</div>
+                <span style="color:var(--text-muted);font-size:0.78rem">Preethi Menon</span>
+              </div>
+              <span style="color:var(--text-muted);font-size:0.78rem">7 min · Mar 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Caregiver Jobs -->
+        <a href="caregiver-jobs-abroad.html" class="blog-card fade-up delay-1" style="text-decoration:none" data-category="jobs">
+          <div class="blog-thumb">
+            <div class="blog-thumb-gradient" style="background:linear-gradient(135deg,#1a1a00,#FFB800)">
+              <span style="font-size:4.5rem">👴</span>
+            </div>
+          </div>
+          <div style="padding:1.5rem">
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem">
+              <span class="blog-category">Jobs Abroad</span>
+            </div>
+            <h2 style="font-family:var(--font-heading);font-weight:700;font-size:1.05rem;color:var(--text-primary);margin-bottom:0.5rem;line-height:1.4">Caregiver Jobs in Germany and Japan: How to Apply from India</h2>
+            <p style="color:var(--text-muted);font-size:0.875rem;line-height:1.6;margin-bottom:1.25rem">Step-by-step guide to getting a caregiver job in Germany or Japan. Language requirements, salary, daily life, costs involved, and JP Careers' success stories.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="display:flex;align-items:center;gap:0.5rem">
+                <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#FFB800,#FF6B6B);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:#fff">JP</div>
+                <span style="color:var(--text-muted);font-size:0.78rem">JP Careers Team</span>
+              </div>
+              <span style="color:var(--text-muted);font-size:0.78rem">9 min · Apr 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Work Visa Guide -->
+        <a href="work-visa-guide.html" class="blog-card fade-up delay-2" style="text-decoration:none" data-category="visa">
+          <div class="blog-thumb">
+            <div class="blog-thumb-gradient" style="background:linear-gradient(135deg,#0d0033,#7F5AF0)">
+              <span style="font-size:4.5rem">🛂</span>
+            </div>
+          </div>
+          <div style="padding:1.5rem">
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem">
+              <span class="blog-category" style="background:rgba(127,90,240,0.1);border-color:rgba(127,90,240,0.2);color:#7F5AF0">Visa Tips</span>
+              <span class="tag-green tag">Must Read</span>
+            </div>
+            <h2 style="font-family:var(--font-heading);font-weight:700;font-size:1.05rem;color:var(--text-primary);margin-bottom:0.5rem;line-height:1.4">Work Visa Guide: How to Get a Work Permit Abroad from India</h2>
+            <p style="color:var(--text-muted);font-size:0.875rem;line-height:1.6;margin-bottom:1.25rem">Comprehensive guide covering work visa types for Japan, Canada, Germany, UK, and Australia. Documents needed, timelines, costs, and common mistakes to avoid.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="display:flex;align-items:center;gap:0.5rem">
+                <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#FFB800,#6C63FF);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:#fff">RK</div>
+                <span style="color:var(--text-muted);font-size:0.78rem">Rajesh Kumar</span>
+              </div>
+              <span style="color:var(--text-muted);font-size:0.78rem">12 min · May 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Placeholder coming soon card -->
+        <div class="glass fade-up delay-3" style="border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:320px;border:2px dashed var(--border-glass)">
+          <div style="font-size:3rem;margin-bottom:1rem;opacity:0.4">📝</div>
+          <p style="font-family:var(--font-heading);font-weight:600;color:var(--text-muted);font-size:0.95rem;text-align:center;padding:0 2rem">More guides coming soon</p>
+          <p style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;text-align:center;padding:0 2rem">Subscribe to our newsletter to be notified</p>
+          <form data-newsletter style="display:flex;gap:0.5rem;margin-top:1.5rem;flex-wrap:wrap;justify-content:center;padding:0 1rem">
+            <input type="email" placeholder="your@email.com" class="form-input" required style="font-size:0.825rem;padding:0.6rem 0.875rem;flex:1;min-width:180px" />
+            <button type="submit" class="btn-primary" style="padding:0.6rem 1rem;font-size:0.825rem">Notify Me →</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--bg-dark2);border-top:1px solid var(--border-glass);padding:2.5rem 0 1.5rem">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1.5rem">
+        <a href="../index.html" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none">
+          <span style="width:32px;height:32px;background:linear-gradient(135deg,#6C63FF,#00D4FF);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:0.85rem">JP</span>
+          <span class="gradient-text" style="font-family:var(--font-heading);font-weight:700">JP Careers</span>
+        </a>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+          <a href="../index.html" style="color:var(--text-muted);text-decoration:none;font-size:0.85rem" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'">Home</a>
+          <a href="../services.html" style="color:var(--text-muted);text-decoration:none;font-size:0.85rem" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'">Services</a>
+          <a href="../contact.html" style="color:var(--text-muted);text-decoration:none;font-size:0.85rem" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'">Contact</a>
+          <a href="../privacy-policy.html" style="color:var(--text-muted);text-decoration:none;font-size:0.85rem" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'">Privacy</a>
+        </div>
+      </div>
+      <div class="divider-gradient" style="margin-bottom:1.25rem"></div>
+      <p style="color:var(--text-muted);font-size:0.8rem;text-align:center">© 2026 JP Careers. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a id="whatsapp-btn" href="https://wa.me/919000446789" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    function filterPosts(cat) {
+      const cards = document.querySelectorAll('#blog-grid [data-category]');
+      const btns = document.querySelectorAll('[id^="filter-"]');
+      btns.forEach(btn => {
+        btn.style.color = 'var(--text-muted)';
+        btn.style.background = '';
+        btn.style.borderColor = 'var(--border-glass)';
+      });
+      const activeBtn = document.getElementById('filter-' + cat);
+      if (activeBtn) {
+        activeBtn.style.color = 'var(--primary)';
+        activeBtn.style.background = 'rgba(108,99,255,0.1)';
+        activeBtn.style.borderColor = 'rgba(108,99,255,0.3)';
+      }
+      cards.forEach(card => {
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/forms.js"></script>
+</body>
+</html>
