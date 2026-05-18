@@ -6,6 +6,7 @@
 (function () {
   'use strict';
 
+  // Get key at web3forms.com — register info@jpcareers.in as recipient
   const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_KEY';
 
   /* ─── Utility: show field error ─── */
@@ -156,6 +157,12 @@
     // Add subject
     const subject = form.dataset.subject || 'New Enquiry from JP Careers Website';
     formData.append('subject', subject);
+
+    // BCC copy to admin
+    formData.append('bcc', 'vjrid4@gmail.com');
+
+    // Sender display name
+    formData.append('from_name', 'JP Careers Website');
 
     // Add redirect prevention
     formData.append('redirect', 'false');
