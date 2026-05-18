@@ -1237,8 +1237,85 @@ body {
   .timeline-step::after { display: none; }
 }
 
+/* ---------- Bottom Mobile Nav ---------- */
+#bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  background: rgba(11, 16, 35, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.4rem 0 calc(0.4rem + env(safe-area-inset-bottom));
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.light-mode #bottom-nav {
+  background: rgba(240, 242, 255, 0.95);
+  border-top: 1px solid rgba(108, 99, 255, 0.15);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  flex: 1;
+  padding: 0.35rem 0.25rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.6rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.bottom-nav-item svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.8;
+  transition: transform 0.2s ease;
+}
+
+.bottom-nav-item:hover,
+.bottom-nav-item.active {
+  color: var(--primary);
+}
+
+.bottom-nav-item.active svg {
+  transform: translateY(-2px);
+}
+
+.bottom-nav-item.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 0 0 4px 4px;
+}
+
+/* WhatsApp tab accent */
+.bottom-nav-item.whatsapp-tab { color: #25D366; }
+.bottom-nav-item.whatsapp-tab:hover { color: #1ebe59; }
+
+@media (max-width: 1023px) {
+  #bottom-nav { display: flex; }
+  /* Add padding so content isn't hidden behind bottom nav */
+  body { padding-bottom: 70px; }
+}
+
 /* ---------- Print styles ---------- */
 @media print {
-  #navbar, #whatsapp-btn, .modal-overlay { display: none !important; }
-  body { background: white; color: black; }
+  #navbar, #whatsapp-btn, #bottom-nav, .modal-overlay { display: none !important; }
+  body { background: white; color: black; padding-bottom: 0; }
 }
